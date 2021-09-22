@@ -15,23 +15,42 @@ names = open("./Input/Names/invited_names.txt", "r")
 #cannot access names.readlines() repeatedly.
 #not sure why this is?
 list_of_names = names.readlines()  #returns a list of text from file?  does this only work 1 time after opening?
-print(list_of_names)
+#print(list_of_names)
 
 new_list = []
 new_line = chr(10)
 for name in list_of_names:
     new_list.append(name.replace(new_line, " "))
 
-print(list_of_names)
-print(new_list)
+#print(list_of_names)
+#print(new_list)
 
 list_edited = []
 for name in new_list:
     list_edited.append(name.strip())
 
-print (list_edited)
+print(list_edited)
 
+file = open("./Input/Letters/starting_letter.txt")
+
+#needs a loop here.  salutation stays the same.  overwrite salutation_and_name through each iteration
+#then take body_of_letter and overwrite subscript 0.  then write and export to separate file.
+#appears body of letter needs to be saved as a list before the loop iterates.
+salutation = file.readline()
+salutation_and_name = salutation.replace("[name]", list_edited[0])
+print(salutation_and_name)
+salutation_and_name = salutation.replace("[name]", list_edited[2])
+print(salutation_and_name)
 #print(names.readlines())  #returns a list of text from file?
+
+
+file = open("./Input/Letters/starting_letter.txt")
+body_of_letter = file.readlines()
+print(body_of_letter)
+
+body_of_letter[0] = salutation_and_name
+
+print(body_of_letter)
 
 #list_of_names = names.readlines()
 #print(list_of_names)
