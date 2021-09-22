@@ -17,11 +17,27 @@ names = open("./Input/Names/invited_names.txt", "r")
 list_of_names = names.readlines()  #returns a list of text from file?  does this only work 1 time after opening?
 print(list_of_names)
 
+new_list = []
+new_line = chr(10)
+for name in list_of_names:
+    new_list.append(name.replace(new_line, " "))
+
+print(list_of_names)
+print(new_list)
+
+list_edited = []
+for name in new_list:
+    list_edited.append(name.strip())
+
+print (list_edited)
+
 #print(names.readlines())  #returns a list of text from file?
 
 #list_of_names = names.readlines()
 #print(list_of_names)
 #print(len(list_of_names))
+
+
 
 
 #examples = open("./Output/ReadyToSend/example.txt", "r")
