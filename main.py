@@ -36,6 +36,7 @@ file = open("./Input/Letters/starting_letter.txt")
 #needs a loop here.  salutation stays the same.  overwrite salutation_and_name through each iteration
 #then take body_of_letter and overwrite subscript 0.  then write and export to separate file.
 #appears body of letter needs to be saved as a list before the loop iterates.
+#also needs list_edited name appended to name of file name to save.
 salutation = file.readline()
 salutation_and_name = salutation.replace("[name]", list_edited[0])
 print(salutation_and_name)
