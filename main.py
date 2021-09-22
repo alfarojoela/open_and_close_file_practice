@@ -11,6 +11,7 @@
 # print(f.readline())
 # f.close()
 
+#step by step process for future reference.
 #names is saved as a class object.
 names = open("./Input/Names/invited_names.txt", "r")
 
