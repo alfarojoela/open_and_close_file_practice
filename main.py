@@ -13,6 +13,7 @@
 names = open("./Input/Names/invited_names.txt", "r")
 #appears that return values of readlines() need to be stored into a variable after assignment.
 #cannot access names.readlines() repeatedly.
+#not sure why this is?
 list_of_names = names.readlines()  #returns a list of text from file?  does this only work 1 time after opening?
 print(list_of_names)
 
